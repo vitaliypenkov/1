@@ -5,6 +5,7 @@ using Common;
 using Common.DTO;
 using Microsoft.AspNetCore.Mvc;
 using System.ComponentModel.DataAnnotations;
+using System.Net;
 using System.Text.RegularExpressions;
 using ValidationResult = FluentValidation.Results.ValidationResult;
 
@@ -70,7 +71,7 @@ namespace BasicCoreApi.Controllers
 
             if (validationResult.Errors.Count > 0)
             {
-                return Problem(detail: validationResult.ToString(";"), statusCode: (int)ApiErrorCode.CallbackDataInvalid);
+                return Problem(detail: validationResult.ToString(";"), statusCode: (int)HttpStatusCode.UnprocessableEntity);
             }
 
             return new InitResponseDto()

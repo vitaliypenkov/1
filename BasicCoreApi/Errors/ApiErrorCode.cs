@@ -9,7 +9,5 @@
         MissingCountryCookie = 3,
 
         AutorizationHeadearMalformed = 4,
-        
-        CallbackDataInvalid = 5,
     }
 }
