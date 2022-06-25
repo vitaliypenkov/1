@@ -1,0 +1,6 @@
+*.pdb
+BasicCoreApi/obj/
+BasicCoreApi/bin/
+BasicCoreApi/.vs/
+*.suo
+BasicCoreApi/BasicCoreApi/obj/
